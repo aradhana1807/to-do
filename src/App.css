@@ -1,38 +1,179 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+body {
+  background-color: #191919;
+  color: #ddd;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+form {
+  border: 3px solid #30313D;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type="text"] {
+  font-family: 'Ubuntu', sans-serif;
+  background: none;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px;
+  display: block;
+  width: 100%;
+}
+
+form button {
+  background-color: #C84B31;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 10%;
+}
+
+
+div.task {
+  background-color: #30313D;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s linear;
+}
+
+div.task svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: #C84B31;
+  cursor: pointer;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task-name,
+div.task form {
+  flex-grow: 1;
+}
+
+div.task span {
+  position: relative;
+}
+
+div.task span:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 10px;
+  transition: width .1s linear;
+}
+
+div.task.done span:before {
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div.checkbox {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.delete {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button.delete svg {
+  fill: #888;
+  height: 14px;
+}
+
+div.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+.footer {
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 8px;
+}
+
+@media (max-width: 1024px) {
+  main {
+    max-width: 650px;
   }
-  to {
-    transform: rotate(360deg);
+
+  form input[type="text"] {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 500px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+
+}
+
+@media (max-width: 640px) {
+  main {
+    max-width: 370px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 25px;
   }
 }
