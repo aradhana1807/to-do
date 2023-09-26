@@ -120,16 +120,6 @@ div.task input {
   padding: 2px 4px;
 }
 
-.footer {
-  color: #ffffff;
-  text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 8px;
-}
-
 @media (max-width: 1024px) {
   main {
     max-width: 650px;
@@ -187,23 +177,3 @@ img.appLogo {
   height: 115px;
 }
 
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 147px;
-  
-}
-
-.wave .shape-fill {
-  fill: #A05344;
-}
