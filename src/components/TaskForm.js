@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion"
 export default function TaskForm({ onAdd }) {
   const [taskName, setTaskName] = useState('');
   function handleSubmit(ev) {
@@ -13,7 +13,10 @@ export default function TaskForm({ onAdd }) {
         value={taskName}
         onChange={ev => setTaskName(ev.target.value)}
         placeholder="Your next task..." />
-      <button>+</button>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >+</motion.button>
     </form>
   );
 }

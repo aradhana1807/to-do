@@ -177,3 +177,33 @@ div.task input {
     font-size: 25px;
   }
 }
+
+.appLogo-container {
+  display: flex;
+  justify-content: center;
+}
+
+img.appLogo {
+  height: 115px;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 147px;
+  
+}
+
+.wave .shape-fill {
+  fill: #A05344;
+}
